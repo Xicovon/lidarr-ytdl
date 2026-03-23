@@ -11,8 +11,8 @@ services:
       - '/media/lidarr/config/lidarr.db:/media/lidarr/config/lidarr.db'
     build:
       context: .
-      args:
-        LIDARR_URL: http://10.0.0.202:8686
-        LIDARR_API_KEY: fdc67d5ad71643b2bfd20c465d4784fe
-        LIDARR_DB: /media/lidarr/config/lidarr.db
-        LIDARR_MUSIC_PATH: /media/lidarr/music
+    environment:
+      LIDARR_URL: "http://10.0.0.202:8686"
+      LIDARR_API_KEY: "fdc67d5ad71643b2bfd20c465d4784fe"
+      LIDARR_DB: "/media/lidarr/config/lidarr.db"
+      LIDARR_MUSIC_PATH: "/media/lidarr/music"
